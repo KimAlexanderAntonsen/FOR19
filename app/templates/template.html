@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    
+</head>
+
+<body>
+    <div class="nav-bar">
+        {% set navigation_bar = [
+            ('/', 'home', 'Hjem')
+          ] 
+        -%}
+  
+      {% set active_page = active_page|default('home') -%}
+    </div>
+    <div class="body">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
