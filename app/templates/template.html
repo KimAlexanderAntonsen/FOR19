@@ -2,17 +2,27 @@
 <html lang="en" dir="ltr">
 
 <head>
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename='template.css') }}">
 </head>
 
 <body>
     <div class="nav-bar">
         {% set navigation_bar = [
-            ('/', 'home', 'Hjem')
+            ('/', 'home', 'Home'),
+            ('/methodology', 'methodology', 'Methodology'),
+            ('/register', 'register', 'Register'),
+            ('/login', 'login', 'Login')
           ] 
         -%}
   
       {% set active_page = active_page|default('home') -%}
+
+      {% for href, id, caption in navigation_bar %}
+      <a href="{{ href|e }}" class="{% if id == active_page %}active{% endif %}">{{ caption|e }}</a>
+      {% endfor %}
+
     </div>
     <div class="body">
         {% block content %}

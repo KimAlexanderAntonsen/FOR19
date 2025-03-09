@@ -5,6 +5,18 @@ from config import *
 def index():
     return flask.render_template('index.html')
 
+@app.route('/methodology')
+def methodology():
+    return flask.render_template('methodology.html')
+
+@app.route('/register')
+def register():
+    return flask.render_template('register.html')
+
+@app.route('/login')
+def login():
+    return flask.render_template('login.html')
+
 ## User handling
 @login_manager.user_loader
 def load_user(userid):
