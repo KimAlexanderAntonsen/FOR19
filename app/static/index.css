@@ -1,4 +1,4 @@
-body {
+.body {
     padding: 0;
     margin: 0;
 }
@@ -136,5 +136,48 @@ body {
 
 .social-button:hover {
     opacity: 0.9;
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #edebe9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem;
+}
+.summary h1{
+    color: #266a2a;
+    font-weight: bold;
+}
+
+.formula {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1.5rem;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #edebe9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem;
+}
+.register h1{
+    color: #266a2a;
+    font-weight: bold;
 }
 
