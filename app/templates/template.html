@@ -20,18 +20,18 @@
 <body>
   <section class="section_navbar">
     <div class="nav-bar">
-      <div class="container">
+      <div class="container nav-inner">
         <h1 class="logo">
           <a href="/" class="logo-link">
             <i class="fa-solid fa-seedling"></i>
             <span class="logo-text">CarbonTrace</span>
           </a>
         </h1>
-
+      
         <div class="nav-toggle" id="nav-toggle">
           <i class="fas fa-bars"></i>
         </div>
-
+      
         <nav class="nav-links" id="nav-links">
           {% set navigation_bar = [
               ('/', 'home', '<i class="fa-solid fa-house"></i> Home'),
@@ -45,6 +45,7 @@
           {% endfor %}
         </nav>
       </div>
+      
     </div>
   </section>
 

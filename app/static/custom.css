@@ -337,31 +337,47 @@ body {
 /* Responsive behavior for narrow screens */
 @media (max-width: 768px) {
     .nav-bar .container {
-    flex-direction: column;
-    align-items: flex-start;
+      flex-direction: column;
+      align-items: flex-start;
     }
-
+  
     .nav-toggle {
-    display: block;
+      display: block;
+      margin-left: auto;
+      padding-top: 6px;
     }
-
+  
     .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #BFCCB7;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      padding: 10px 0;
+      margin-top: 10px;
     }
-
+  
     .nav-links.active {
-    display: flex;
+      display: flex;
     }
-
+  
     .nav-links a {
-    padding: 10px 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
+      width: 100%;
+      padding: 12px 20px;
+      text-align: left;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      font-size: 16px;
+      background-color: transparent;
+      color: #222;
+      transition: background-color 0.2s ease;
     }
-}
+  
+    .nav-links a:hover {
+      background-color: #aabb9f;
+    }
+  }
+  
 
 .nav-bar .container {
     display: flex;
