@@ -11,7 +11,8 @@
     {% extends "template.html" %}
     {% set active_page = "home" %}
     {% block content %}
-<div class="hero-section" style="background-image: url('{{ url_for('static', filename='images/landscape_index.jpg') }}'); width: 100vw !important; position: relative; left: 50%; right: 50%; margin-left: -50vw !important; margin-right: -50vw !important;">
+    <div class="hero-section" style="background-image: url('{{ url_for('static', filename='images/landscape_index.jpg') }}'); background-size: cover;">
+
     <div class="hero-content">
         <h1>Welcome to CarbonTrace</h1>
         <p>
