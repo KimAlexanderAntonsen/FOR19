@@ -6,181 +6,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
 </head>
-<div class="hero-section">
+
+<body>
+    {% extends "template.html" %}
+    {% set active_page = "home" %}
+    {% block content %}
+
+    <div class="hero-section">
     <div class="hero-content">
         <h1>Welcome to CarbonTrace</h1>
         <p>Your Journey to Sustainable Awareness Begins Here</p>
         <a href="/" class="cta-button">Let's Start</a>
     </div>
-</div>
-<body>
-    {% extends "template.html" %}
-    {% set active_page = "home" %}
-    {% block content %}
-    
-    
+    </div>
 
     <div class="main-content">
-        <h2>
-            Our purpose
-        </h2>
-        <p>
-            We've created this app to make it easy for you to measure and understand your carbon footprint. With a user-friendly interface, our app gives you a clear picture of your carbon emissions based on your personal input. By using the Carbon App Calculator, you'll discover what factors affect your carbon footprint and learn practical steps you can take to reduce it.
-            We hope our app helps you make more sustainable choices and supports your journey towards reducing your environmental impact. 
-        </p>
-            <br>    
-        <h2>
-            Methodology
-        </h2>
-        <p>
-            Interested in learning more about how our app works behind the scenes? 
-            Head over to our Methodology page, where you can find detailed information on the data sources and calculation methods we use.
-        </p>
-            <br>
-        <h2>
-            Meet Our Team
-        </h2>
-        <p>
-            Our team is passionate about creating solutions that inspire sustainable habits and help both individuals and businesses make eco-friendly decisions every day. 
-            We understand the urgency of addressing environmental challenges and strongly believe our application can spark meaningful, positive change for the planet.
-        </p>
+    <h2>Our purpose</h2>
+    <p>
+        We've created this app to make it easy for you to measure and understand your carbon footprint. With a user-friendly interface, our app gives you a clear picture of your carbon emissions based on your personal input. By using the Carbon App Calculator, you'll discover what factors affect your carbon footprint and learn practical steps you can take to reduce it. We hope our app helps you make more sustainable choices and supports your journey towards reducing your environmental impact. 
+    </p>
 
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="{{ url_for('static', filename='images/Alexander.jpg') }}" alt="Alexander">
-                </div>
-                <h3 class="member-name">Alexander Zhao</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>24 years old from Tønsberg</li>
-                        <li>3rd year student at NHH</li>
-                        <li>AI-technology enthusiast</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+    <h2>Methodology</h2>
+    <p>
+        Interested in learning more about how our app works behind the scenes? 
+        Head over to our Methodology page, where you can find detailed information on the data sources and calculation methods we use.
+    </p>
 
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQG_m57fJG6a6A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1683390012258?e=1747267200&v=beta&t=7H8TSzJkbJTa9V8b5WedQ1oxoevCSRdi4fVVi6Xse8w" alt="Team Member 2">
-                </div>
-                <h3 class="member-name">Kim Antonsen</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>22 years old from Stavanger</li>
-                        <li>3rd year student at NHH</li>
-                        <li>Gambling addict</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/kim-alexander-antonsen/" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+    <h2>Meet Our Team</h2>
+    <p>
+        Our team is passionate about creating solutions that inspire sustainable habits and help both individuals and businesses make eco-friendly decisions every day. 
+        We understand the urgency of addressing environmental challenges and strongly believe our application can spark meaningful, positive change for the planet.
+    </p>
 
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="{{ url_for('static', filename='images/Joakim.jpg') }}" alt="Team Member 3">
-                </div>
-                <h3 class="member-name">Joakim Sætre Breivik</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>21 years old from Ålesund</li>
-                        <li>1st year student at NHH</li>
-                        <li>Likes to travel</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/joakim-saetre-breivik-257bb4221" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/JoakimBreivik" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+    <div class="team-grid">
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="{{ url_for('static', filename='images/Alexander.jpg') }}" alt="Alexander">
+        </div>
+        <h3 class="member-name">Alexander Zhao</h3>
+        <div class="member-details">
+            <ul>
+            <li>24 years old from Tønsberg</li>
+            <li>3rd year student at NHH</li>
+            <li>AI-technology enthusiast</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://linkedin.com/" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        </div>
 
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="https://media.licdn.com/dms/image/v2/D4D03AQHi2l_s1QbB3A/profile-displayphoto-shrink_400_400/B4DZOHzkn7HoAg-/0/1733150264960?e=1747267200&v=beta&t=zHpjDKp5xRritAT3X0Bq4stC5lASYlvDnsX6BmqdFZQ" alt="Team Member 4">
-                </div>
-                <h3 class="member-name">Martin Ravnberg</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>21 years old from Kristiansand</li>
-                        <li>1st year student at NHH</li>
-                        <li>Likes to go boating</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/martin-ravnberg-b42148253/" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/Mr3015" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQG_m57fJG6a6A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1683390012258?e=1747267200&v=beta&t=7H8TSzJkbJTa9V8b5WedQ1oxoevCSRdi4fVVi6Xse8w" alt="Kim">
+        </div>
+        <h3 class="member-name">Kim Antonsen</h3>
+        <div class="member-details">
+            <ul>
+            <li>22 years old from Stavanger</li>
+            <li>3rd year student at NHH</li>
+            <li>Gambling addict</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://linkedin.com/in/kim-alexander-antonsen/" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        </div>
 
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="{{ url_for('static', filename='images/August.jpeg') }}" alt="August">
-                </div>
-                <h3 class="member-name">August Trønnes</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>22 years old from Bergen</li>
-                        <li>2nd year student at NHH</li>
-                        <li>Enjoyer of literature and classical music</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/august-tr%C3%B8nnes-b438a431a/" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="{{ url_for('static', filename='images/Joakim.jpg') }}" alt="Joakim">
+        </div>
+        <h3 class="member-name">Joakim Sætre Breivik</h3>
+        <div class="member-details">
+            <ul>
+            <li>21 years old from Ålesund</li>
+            <li>1st year student at NHH</li>
+            <li>Likes to travel</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/joakim-saetre-breivik-257bb4221" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/JoakimBreivik" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        </div>
 
-            <div class="team-member">
-                <div class="profile-image">
-                    <img src="{{ url_for('static', filename='images/vilhelm.jpg') }}" alt="Team Member 6">
-                </div>
-                <h3 class="member-name">Vilhelm Tysseland</h3>
-                <div class="member-details">
-                    <ul>
-                        <li>22 years old from Oslo</li>
-                        <li>2nd year student at NHH</li>
-                        <li>1st time kontesemester</li>
-                    </ul>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/vilhelm-tysseland-268ba9311/" class="social-button linkedin">
-                        <i class="fa-brands fa-linkedin"></i> LinkedIn
-                    </a>
-                    <a href="https://github.com/" class="social-button github">
-                        <i class="fa-brands fa-github"></i> GitHub
-                    </a>
-                </div>
-            </div>
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQHi2l_s1QbB3A/profile-displayphoto-shrink_400_400/B4DZOHzkn7HoAg-/0/1733150264960?e=1747267200&v=beta&t=zHpjDKp5xRritAT3X0Bq4stC5lASYlvDnsX6BmqdFZQ" alt="Martin">
+        </div>
+        <h3 class="member-name">Martin Ravnberg</h3>
+        <div class="member-details">
+            <ul>
+            <li>21 years old from Kristiansand</li>
+            <li>1st year student at NHH</li>
+            <li>Likes to go boating</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/martin-ravnberg-b42148253/" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/Mr3015" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        </div>
+
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="{{ url_for('static', filename='images/August.jpeg') }}" alt="August">
+        </div>
+        <h3 class="member-name">August Trønnes</h3>
+        <div class="member-details">
+            <ul>
+            <li>22 years old from Bergen</li>
+            <li>2nd year student at NHH</li>
+            <li>Enjoyer of literature and classical music</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/august-tr%C3%B8nnes-b438a431a/" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
+        </div>
+
+        <div class="team-member">
+        <div class="profile-image">
+            <img src="{{ url_for('static', filename='images/vilhelm.jpg') }}" alt="Vilhelm">
+        </div>
+        <h3 class="member-name">Vilhelm Tysseland</h3>
+        <div class="member-details">
+            <ul>
+            <li>22 years old from Oslo</li>
+            <li>2nd year student at NHH</li>
+            <li>1st time kontesemester</li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/vilhelm-tysseland-268ba9311/" class="social-button linkedin">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/" class="social-button github">
+            <i class="fa-brands fa-github"></i> GitHub
+            </a>
+        </div>
         </div>
     </div>
-</div>
-{% endblock %} 
+    </div>
+
+    {% endblock %}
     
 </body>
 </html>
