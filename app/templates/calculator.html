@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}">
+        <title>Calculator</title>
+    </head>
+<body>
+    {% extends "template.html" %}
+    {% set active_page = "calculator" %}
+    {% block content %}
+    <div class="main-content">
+        <div class="summary">
+            <h1>Methodology</h1>
+            <p>
+                Welcome to our Carbon App Calculator! To get started, simply click the 'New Entry' button and enter your travel history. 
+                Our app will provide both a visual and numerical breakdown of your travel emissions. 
+                You can filter your entries by date and choose whether to view only your own entries or all entries from your organization. 
+                To exclude a mode of transport, simply click on the corresponding option beside the pie charts. If you need to delete an entry, scroll down to the table at the bottom of the page and click the 'Delete' button beside the entry you wish to remove. 
+                The table also allows you to filter your entries by for example date, number of kilometers, or mode of transport. 
+                Additionally, you can use the search bar to find a specific entry           
+            </p>
+        </div>
+        <div class="summary">
+            <h1>Calculate your emissions</h1>
+            <div>
+                <a class="btn btn-primary" href="#" role="button">New Entry</a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
