@@ -3,9 +3,18 @@ import os
 import flask_login
 from flask_session import Session
 from flask import send_from_directory, request, session, jsonify
+from flask_sqlalchemy import SQLAlchemy
+from flask_bcrypt import Bcrypt
 
 app = flask.Flask(__name__)
 app.secret_key = "s_key"     # Secret key for sessions
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
+app.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
+
+db = SQLAlchemy(app)
+
+bcrypt = Bcrypt(app)
 
 ## Flask login initialisations
 login_manager = flask_login.LoginManager()
