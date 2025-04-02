@@ -17,6 +17,10 @@ def register():
 def login():
     return flask.render_template('login.html')
 
+@app.route('/calculator')
+def calculator():
+    return flask.render_template('calculator.html')
+
 ## User handling
 @login_manager.user_loader
 def load_user(userid):

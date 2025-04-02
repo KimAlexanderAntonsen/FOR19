@@ -120,6 +120,7 @@ body {
     color: #d6d6d6;
 }
 
+
 /* MAIN BODY CONTENT */
 .body {
     flex: 1;
@@ -132,6 +133,24 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 20px;
+    align-items: center;
+}
+
+/* MODAL */
+
+.modal-content{
+    background-color: #BFCCB7;
+}
+
+.modal-title{
+    font-weight: 700;
+}
+
+.btn-secondary{
+    background-color: #6c757d;
+}
+.btn-secondary:hover{
+    background-color: #5c636a;
 }
 
 /* TEAM GRID */
