@@ -14,7 +14,7 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
-  <!-- JavaScript -->
+  <!-- Link the JavaScript files -->
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 <body>
@@ -36,8 +36,8 @@
           {% set navigation_bar = [
               ('/', 'home', '<i class="fa-solid fa-house"></i> Home'),
               ('/methodology', 'methodology', '<i class="fa-solid fa-book"></i> Methodology'),
-              ('/register', 'register', '<i class="fa-solid fa-user"></i> Register'),
-              ('/login', 'login', 'Login')
+              ('/calculator', 'calculator', '<i class="fa-solid fa-calculator"></i> Carbon App'),
+              ('/login', 'login', '<i class="fa-solid fa-user"></i> Login/Register')
           ] %}
           {% set active_page = active_page|default('home') %}
           {% for href, id, caption in navigation_bar %}
@@ -65,12 +65,9 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/methodology">Methodology</a></li>
-          <li><a href="/register">Register</a></li>
-        </ul>
+          <li><a href="/calculator">Carbon App</a></li>
       </div>
     </div>
   </footer>
-  
-  
 </body>
 </html>
