@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methodology</title>
+</head>
+<body>
+    {% extends "template.html" %}
+    {% set active_page = "methodology" %}
+    {% block content %}
+    <div class="main-content">
+        <div class="methodology-header">
+            <div class="text-content">
+                <h1 class="page-title">Methodology</h1>
+                <p class="intro-text">
+                    We developed an application that calculates carbon emissions across various modes of transportation, helping you make eco-friendly travel decisions. To support this, we applied carbon footprint analysis techniques, which measure the total greenhouse gas emissions associated with each travel option. This approach provides a clear understanding of your environmental impact.
+                </p>
+                <div class="button-group">
+                    <a href="#" class="btn btn-primary">Paper</a>
+                    <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn btn-primary">Carbon App</a>
+                </div>
+            </div>
+            <div class="methodology-image">
+                <img src="{{ url_for('static', filename='images/reading_methodology.jpg') }}" alt="Methodology illustration">
+            </div>
+        </div>
+        <div class="summary">
+            <h3>Our numbers and formulas:</h3>
+            <div class="formula">
+                <p>
+                    This is the general formula for calculating the CO2 emissions. We multiply the CO2 equivalents with the number of km traveled. Some of the transport methods use this simple formula, whilst others have small variable changes.
+                </p>
+            </div>
+        </div>
+    </div>
+    {% endblock %} 
+    
+</body>
+</html>
