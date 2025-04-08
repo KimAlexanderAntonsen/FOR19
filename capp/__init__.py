@@ -7,6 +7,17 @@ import os
 
 application = Flask(__name__)
 
+# application.config['SECRET_KEY'] = os.environ['SECRET_KEY']  
+application.config['SECRET_KEY'] = 'S_key'
+
+application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///user.db'
+application.config['SQLALCHEMY_BINDS'] ={'transport': 'sqlite:///transport.db'}
+
+db = SQLAlchemy(application)
+bcrypt = Bcrypt(application)
+login_manager= LoginManager(application)
+login_manager.login_view = 'login.login_home'
+login_manager.login_message_category = 'info'
 
 from capp.home.routes import home
 from capp.methodology.routes import methodology
