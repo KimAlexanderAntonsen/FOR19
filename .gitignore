@@ -1,0 +1,11 @@
+.venv
+__pycache__
+/capp/__pycache__
+/capp/.venv
+/capp/flask_session
+/capp/carbon_app
+/capp/home/__pycache__
+/capp/methodology/__pycache__
+/capp/user/__pycache__
+
+*.db
