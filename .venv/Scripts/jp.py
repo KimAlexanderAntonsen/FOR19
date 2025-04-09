@@ -1,4 +1,4 @@
-#!C:\Users\01ale\FOR19\.venv\Scripts\python.exe
+#!C:\Users\marti\Documents\NHHKodefag\FOR19\.venv\Scripts\python.exe
 
 import sys
 import json
