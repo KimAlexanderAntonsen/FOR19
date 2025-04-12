@@ -16,9 +16,11 @@
     {% block content %}
     <div class="main-content">
         <div class="submit_form">
+            <a href="/carbon_app" class="back-btn"><i class="fa-solid fa-arrow-left"></i></a>
+
             <div class="div_form">
                 <h2>You have selected walk <i class="fa-solid fa-walk"></i> </h2>
-                <form>
+                <form method="POST" action="">
                     <label for="kilometers">Kilometers</label>
                     <input type="number" id="kilometers" name="kilometers" placeholder="Enter kilometers">
 

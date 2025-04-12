@@ -166,6 +166,11 @@ body {
     text-align: left;
 }
 
+.back-btn {
+    margin: auto;
+    color: #000;
+}
+
 /* SUBMIT NEW ENTRY */
 
 .submit_form {
@@ -210,6 +215,8 @@ body {
     border-radius: 5px;
     font-size: 16px;
     width: auto;
+    cursor: pointer;
+
   }
   
   button:hover {
@@ -303,7 +310,7 @@ body {
     box-sizing: border-box;
     width: 100%;
     overflow-x: hidden; /* prevent scrollbar glitches */
-    margin-top: 75px;
+    margin-top: auto;
 }
 
 .footer-container {
