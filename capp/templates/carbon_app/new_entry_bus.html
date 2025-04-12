@@ -20,15 +20,11 @@
             <div class="div_form">
                 <h2>You have selected bus <i class="fa-solid fa-bus"></i> </h2>
                 <form method="POST" action>
+                    {{ form.hidden_tag() }}
                     <label for="kilometers">Kilometers</label>
-                    <input type="number" id="kms" name="kilometers" placeholder="Enter kilometers">
+                    {{ form.kms(class="form-control-lg", type='number') }}
                     <label for="fuel">Type of fuel</label>
-                    <select id="fuel" name="fuel">
-                        <option value="Electric">Electric</option>
-                        <option value="Diesel">Diesel</option>
-                        <option value="Petrol">Petrol</option>
-                    </select>
-
+                    {{ form.fuel_type(class="form-control-lg") }}
                     <button name="submit" type="submit" id="'submit">Submit</button>
                 </form>
             </div>

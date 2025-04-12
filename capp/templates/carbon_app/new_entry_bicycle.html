@@ -20,16 +20,13 @@
 
             <div class="div_form">
                 <h2>You have selected bicycle <i class="fa-solid fa-bicycle"></i> </h2>
-                <form method="POST" action="">
+                <form method="POST" action>
+                    {{ form.hidden_tag() }}
                     <label for="kilometers">Kilometers</label>
-                    <input type="number" id="kilometers" name="kilometers" placeholder="Enter kilometers">
-
+                    {{ form.kms(class="form-control-lg", type='number') }}
                     <label for="fuel">Type of fuel</label>
-                    <select id="fuel" name="fuel">
-                        <option value="no_fuel">No fuel</option>
-                    </select>
-
-                    <button type="submit">Submit</button>
+                    {{ form.fuel_type(class="form-control-lg") }}
+                    <button name="submit" type="submit" id="'submit">Submit</button>
                 </form>
             </div>
         </div>

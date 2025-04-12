@@ -20,18 +20,13 @@
 
             <div class="div_form">
                 <h2>You have selected plane <i class="fa-solid fa-plane"></i> </h2>
-                <form method="POST" action="">
+                <form method="POST" action>
+                    {{ form.hidden_tag() }}
                     <label for="kilometers">Kilometers</label>
-                    <input type="number" id="kilometers" name="kilometers" placeholder="Enter kilometers">
-
+                    {{ form.kms(class="form-control-lg", type='number') }}
                     <label for="fuel">Type of fuel</label>
-                    <select id="fuel" name="fuel">
-                        <option value="Jetfuel">Jetfuel</option>
-                        <option value="Electric">Electric</option>
-                        <option value="Hybrid">Hybrid</option>                        
-                    </select>
-
-                    <button type="submit">Submit</button>
+                    {{ form.fuel_type(class="form-control-lg") }}
+                    <button name="submit" type="submit" id="'submit">Submit</button>
                 </form>
             </div>
         </div>

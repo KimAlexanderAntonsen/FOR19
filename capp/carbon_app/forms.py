@@ -41,7 +41,7 @@ class BicycleForm(FlaskForm):
 class TrainForm(FlaskForm):
   kms = FloatField('Kilometers', [InputRequired()])
   fuel_type = SelectField('Type of Fuel', [InputRequired()], 
-    choices=[('Electric', 'Diesel')])
+    choices=[('Electric', 'Electric'), ('Diesel', 'Diesel')])
   submit = SubmitField('Submit')
 
 class WalkForm(FlaskForm):
