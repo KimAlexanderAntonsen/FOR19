@@ -15,7 +15,24 @@
     {% set active_page = "carbon_app" %}
     {% block content %}
     <div class="main-content">
-        <p>hei!</p>
+        <div class="submit_form">
+            <div class="div_form">
+                <h2>You have selected train <i class="fa-solid fa-train"></i> </h2>
+                <form>
+                    <label for="kilometers">Kilometers</label>
+                    <input type="number" id="kilometers" name="kilometers" placeholder="Enter kilometers">
+
+                    <label for="fuel">Type of fuel</label>
+                    <select id="fuel" name="fuel">
+                        <option value="Electric">Electric</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Gasoline">Gasoline</option>
+                        <option value="Hybrid">Hybrid</option>
+                    </select>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
     {% endblock %}
 </body>

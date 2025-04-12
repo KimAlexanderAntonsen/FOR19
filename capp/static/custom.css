@@ -166,22 +166,55 @@ body {
     text-align: left;
 }
 
-/* MODAL */ /* wtf er alt modal?? */
+/* SUBMIT NEW ENTRY */
 
-.modal-content{
-    background-color: #BFCCB7;
+.submit_form {
+    background-color: #8bc34a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin: auto;
 }
 
-.modal-title{
-    font-weight: 700;
-}
-
-.btn-secondary{
-    background-color: #6c757d;
-}
-.btn-secondary:hover{
-    background-color: #5c636a;
-}
+.submit_form .h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    align-self: start;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: auto;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
 
 /* TEAM GRID */
 .team-grid {
