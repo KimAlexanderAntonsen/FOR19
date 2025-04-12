@@ -27,13 +27,50 @@
                 <img src="{{ url_for('static', filename='images/reading_methodology.jpg') }}" alt="Methodology illustration">
             </div>
         </div>
+
         <div class="summary">
             <h3>Our numbers and formulas:</h3>
-            <div class="formula">
+
                 <p>
-                    This is the general formula for calculating the CO2 emissions. We multiply the CO2 equivalents with the number of km traveled. Some of the transport methods use this simple formula, whilst others have small variable changes.
+                    To compare the environmental impact of different transport modes, we use \(CO_2\)-equivalents (\(CO_2e\)) — a common unit 
+                    that captures the effect of multiple greenhouse gases like methane \(CH_4\) and nitrous oxide \(N_2O\) as if they were all \(CO_2\).
+                    This makes it easier to calculate and compare emissions across cars, buses, trains, and flights.
+                    This is the general formula for calculating the \(CO_2\) emissions. We multiply the \(CO_2e\) equivalents with the number of kilometers traveled.
+                    Some of the transport methods use this simple formula, whilst others have small variable changes.
                 </p>
-            </div>
+                
+                <div class="formula">
+                    \[\text{General Formula for All Modes}:\]
+                    \[CO_2e = \text{Distance} \times \text{Emission factor}_i\]
+                    \[\text{Total emissions } (CO_2e) = \sum_{i=1}^{n} ( \text{Distance}_i \times \text{Emission factor}_i )\]
+                </div>
+                <p>
+                    This is the core formula used in our calculator. We multiply the number of kilometers traveled by an average emission factor for each mode of transport. 
+                    These emission factors are based on grams of CO₂e per kilometer, and they vary depending on whether you're driving a diesel car, taking a train,or flying.
+                </p>
+                <p>
+                    Some transport methods have emission factors that already account for sharing.
+                    For example, a train or flight gives emissions per passenger.
+                    For others, like a car or ferry, we divide the total emissions across all passengers to get a fairer estimate per person.
+                </p>
+                <h3>Example Calculation</h3>
+                <p>
+                    Let's say you drive 50 kilometers in a petrol car. The emission factor for a petrol car is approximately \(160 \, \text{g CO}_2e/\text{km}\).
+                </p>
+
+                <div class="formula">
+                    \[\text{We calculate the emissions using the formula}:\]
+                    \[
+                    CO_2e = d \times e = 50 \times 160 = 8000 \, \text{g CO}_2e
+                    \]
+                    \[\text{We then convert grams to kilograms}:\]
+                    \[
+                    8000 \, \text{g CO}_2e = 8 \, \text{kg CO}_2e
+                    \]
+                </div>
+                <p>
+                    So, this journey results in a total emission of \(8 \, \text{kg CO}_2e\).
+                </p>
         </div>
     </div>
     {% endblock %} 

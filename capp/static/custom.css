@@ -367,7 +367,7 @@ body {
     text-align: center;
     padding: 1.5rem;
     border-radius: 10px;
-    background-color: #edebe9;
+    background-color: #bfccb7;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 1.5rem;
 }
@@ -378,26 +378,34 @@ body {
 }
 
 .summary h3 {
-    color: #317734;
+    color: #333333;
     margin-bottom: 1rem;
+}
+
+.summary p {
+    color: #333333;
+    line-height: 1.6;
 }
 
 /* FORMULA BLOCK */
 .formula {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    justify-content: center;
+    width: 90%;
     align-items: center;
     text-align: center;
     padding: 1.5rem;
     border-radius: 10px;
     background-color: white;
     margin: 1.5rem;
+    background: #49736f;
+    color: beige
 }
 
 .formula p {
-    margin: 0;
+    margin: 0.5rem;
     line-height: 1.6;
-    color: #444444;
+    color: beige;
 }
 
 /* REGISTER BLOCK */
