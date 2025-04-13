@@ -40,7 +40,17 @@ def carbon_app_home():
 @carbon_app.route("/carbon_app/your_data")
 @login_required
 def your_data():
-    return render_template("carbon_app/your_data.html", title='Your Data')
+    entries = Transport.query.filter_by(user_id=current_user.id).all()
+    return render_template("carbon_app/your_data.html", title='Your Data', entries=entries)
+
+@carbon_app.route("/carbon_app/delete_emission/<int:entry_id>")
+@login_required
+def delete_emission(entry_id):
+    print(entry_id)
+    entry = Transport.query.get_or_404(entry_id)
+    db.session.delete(entry)
+    db.session.commit()
+    return redirect('/carbon_app/your_data')
 
 @carbon_app.route('/carbon_app/new_entry_bus', methods=['GET','POST'])
 @login_required
