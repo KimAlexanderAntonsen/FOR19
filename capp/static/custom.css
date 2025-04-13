@@ -666,6 +666,27 @@ body {
   align-items: center;
   justify-content: center;
 }
+.transport-table {
+  border-collapse: collapse;
+  background-color: #49736f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.transport-table th,
+.transport-table td {
+  padding: 1rem;
+  text-align: left;
+}
+
+.transport-table tbody tr:nth-child(even) {
+  background-color: #bfccb7;
+}
+
+.transport-table tbody tr:hover {
+  background-color: #e9f5ff;
+  color: #5c636a;
+  transition: 0.3s ease;
+}
 
 @media (max-width: 768px) {
   .transport-row {
