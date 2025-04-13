@@ -184,6 +184,63 @@ body {
 .btn-secondary:hover {
   background-color: #5c636a;
 }
+  
+.back-btn {
+    margin: auto;
+    color: #000;
+}
+
+/* SUBMIT NEW ENTRY */
+
+.submit_form {
+    background-color: #8bc34a;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 21rem;
+    margin: auto;
+}
+
+.submit_form .h2 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button {
+    align-self: start;
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    width: auto;
+    cursor: pointer;
+
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
 
 /* TEAM GRID */
 .team-grid {
@@ -265,14 +322,14 @@ body {
 
 /* FOOTER */
 .footer {
-  background-color: #2c4a33; /* Updated to match the provided color scheme */
-  color: #f0f0f0;
-  padding: 2rem 0;
-  font-size: 0.95rem;
-  box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden; /* prevent scrollbar glitches */
-  margin-top: 75px;
+    background-color: #2c4a33; /* Updated to match the provided color scheme */
+    color: #f0f0f0;
+    padding: 2rem 0;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* prevent scrollbar glitches */
+    margin-top: auto;
 }
 
 .footer-container {
@@ -329,15 +386,15 @@ body {
 
 /* SUMMARY BLOCK */
 .summary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 10px;
-  background-color: #edebe9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: #bfccb7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1.5rem;
 }
 
 .summary h1 {
@@ -346,26 +403,34 @@ body {
 }
 
 .summary h3 {
-  color: #317734;
-  margin-bottom: 1rem;
+    color: #333333;
+    margin-bottom: 1rem;
+}
+
+.summary p {
+    color: #333333;
+    line-height: 1.6;
 }
 
 /* FORMULA BLOCK */
 .formula {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem;
-  border-radius: 10px;
-  background-color: white;
-  margin: 1.5rem;
+    display: block;
+    justify-content: center;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background-color: white;
+    margin: 1.5rem;
+    background: #49736f;
+    color: beige
 }
 
 .formula p {
-  margin: 0;
-  line-height: 1.6;
-  color: #444444;
+    margin: 0.5rem;
+    line-height: 1.6;
+    color: beige;
 }
 
 /* REGISTER BLOCK */
@@ -686,6 +751,54 @@ body {
   background-color: #e9f5ff;
   color: #5c636a;
   transition: 0.3s ease;
+}
+
+
+/* TRANSPORT BOX */
+.transport-box {
+    flex: 0 0 165px;  /* Slightly reduced from 175px */
+    height: 165px;  /* Slightly reduced from 175px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    gap: 15px; /* Space between icon and label */
+}
+
+.transport-box:hover {
+    transform: translateY(-5px);
+}
+
+.transport-label {
+    color: #333333;
+    font-weight: 700;
+    font-size: 1.4rem; /* Increased from 1.2rem */
+    margin: 0;
+    order: 2; /* Places text after icon */
+}
+
+.transport-box i {
+    font-size: 4rem;
+    color: #317734;
+    order: 1; /* Places icon */
+}
+
+.transport-grid {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.transport-row {
+    display: flex;
+    justify-content: center;  /* Changed from space-between */
+    gap: 20px;  /* Increased from 12px */
+    margin-bottom: 20px;  /* Increased from 12px */
 }
 
 @media (max-width: 768px) {
