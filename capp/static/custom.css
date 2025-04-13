@@ -193,7 +193,7 @@ body {
 /* SUBMIT NEW ENTRY */
 
 .submit_form {
-    background-color: #8bc34a;
+    background-color: #bfccb7;
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -711,7 +711,7 @@ body {
   margin: 1.5rem;
 }
 .transport-section h3 {
-  color: #ffffff;
+  color: #333333;
   margin-bottom: 1rem;
 }
 
