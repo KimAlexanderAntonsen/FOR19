@@ -856,12 +856,6 @@ body {
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
       }
 
-      /* New Entry button styling */
-      .btn_carbon_app_new_entry_main {
-          color: #fff;
-          text-decoration: none;
-      }
-
 
       /* Mobile responsiveness */
       @media (max-width: 768px) {
