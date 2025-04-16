@@ -1,35 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='custom.css') }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='custom.css') }}"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Methodology</title>
-</head>
-<body>
-    {% extends "template.html" %}
-    {% set active_page = "methodology" %}
-    {% block content %}
+  </head>
+  <body>
+    {% extends "template.html" %} {% set active_page = "methodology" %} {% block
+    content %}
     <div class="main-content">
-        <div class="methodology-header">
-            <div class="text-content">
-                <h1 class="page-title">Methodology</h1>
-                <p class="intro-text">
-                    We developed an application that calculates carbon emissions across various modes of transportation, helping you make eco-friendly travel decisions. To support this, we applied carbon footprint analysis techniques, which measure the total greenhouse gas emissions associated with each travel option. This approach provides a clear understanding of your environmental impact.
-                </p>
-                <div class="button-group">
-                    <a href="#" class="btn btn-primary">Paper</a>
-                    <a href="{{ url_for('carbon_app.carbon_app_home') }}" class="btn btn-primary">Carbon App</a>
-                </div>
-            </div>
-            <div class="methodology-image">
-                <img src="{{ url_for('static', filename='images/reading_methodology.jpg') }}" alt="Methodology illustration">
-            </div>
+      <div class="methodology-header">
+        <div class="text-content">
+          <h1 class="page-title">Methodology</h1>
+          <p class="intro-text">
+            We developed an application that calculates carbon emissions across
+            various modes of transportation, helping you make eco-friendly
+            travel decisions. To support this, we applied carbon footprint
+            analysis techniques, which measure the total greenhouse gas
+            emissions associated with each travel option. This approach provides
+            a clear understanding of your environmental impact.
+          </p>
+          <div class="button-group">
+            <a href="#" class="btn btn-primary">Paper</a>
+            <a
+              href="{{ url_for('carbon_app.carbon_app_home') }}"
+              class="btn btn-primary"
+              >Carbon App</a
+            >
+          </div>
         </div>
+        <div class="methodology-image">
+          <img
+            src="{{ url_for('static', filename='images/reading_methodology.jpg') }}"
+            alt="Methodology illustration"
+          />
+        </div>
+      </div>
 
         <div class="summary">
-            <h3>Our numbers and formulas:</h3>
+            <h3>Our numbers and formulas</h3>
 
                 <p>
                     To compare the environmental impact of different transport modes, we use \(CO_2\)-equivalents (\(CO_2e\)) — a common unit 
@@ -72,8 +87,213 @@
                     So, this journey results in a total emission of \(8 \, \text{kg CO}_2e\).
                 </p>
         </div>
+      
+      
+      
+      <section class="transport-section">
+        <h3>Human Powered</h3>
+        <div class="container">
+          <div class="transport" style="display: block"></div>
+
+          <div class="transport">
+            <div class="box">
+              <i class="fa-solid fa-person-walking-with-cane"></i>
+              <h4>Walking</h4>
+              <p class="transport-method-description">
+                Walking is a zero-emission mode of transport. It has no carbon
+                footprint, making it the most environmentally friendly option.
+              </p>
+            </div>
+
+            <div class="box">
+              <i class="fa-solid fa-person-biking"></i>
+              <h4>Cycling</h4>
+              <p class="transport-method-description">
+                Cycling is another zero-emission mode of transport. It has no
+                carbon footprint, making it another great choice for the
+                environment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Personal Vehicles</h3>
+        <div class="container">
+          <div class="transport" style="display: block"></div>
+          <div class="transport">
+            <div class="box">
+              <i class="fa-solid fa-car-side"></i>
+              <h4>Car</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Petrol</td>
+                  <td>160g</td>
+                  <td>Emissions from burning gasoline in combustion engines</td>
+                </tr>
+                <tr>
+                  <td>Diesel</td>
+                  <td>170g</td>
+                  <td>
+                    Burning diesel in combustion engines, but also releases
+                    potent greenhouse particles
+                  </td>
+                </tr>
+                <tr>
+                  <td>Hybrid</td>
+                  <td>126,1g</td>
+                  <td>
+                    Direct emissions from combusting of fuels. Indirect
+                    emissions from electricity production.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Electric</td>
+                  <td>19,3g</td>
+                  <td>
+                    Indirect emissions due to sources of electricity production.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="box">
+              <i class="fa-solid fa-motorcycle"></i>
+              <h4>Motorbike</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Small</td>
+                  <td>82,77g</td>
+                  <td>Emissions from burning gasoline in combustion engines</td>
+                </tr>
+                <tr>
+                  <td>Medium</td>
+                  <td>100,86g</td>
+                  <td>Emissions from burning gasoline in combustion engines</td>
+                </tr>
+                <tr>
+                  <td>Large</td>
+                  <td>137,7g</td>
+                  <td>Emissions from burning gasoline in combustion engines</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <h3>Public Transport</h3>
+        <div class="container">
+          <div class="transport" style="display: block"></div>
+          <div class="transport">
+            <div class="box">
+              <i class="fa-solid fa-bus-simple"></i>
+              <h4>Bus</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Diesel</td>
+                  <td>27g</td>
+                  <td>
+                    Burning diesel in combustion engines, but also releases
+                    potent greenhouse particles
+                  </td>
+                </tr>
+                <tr>
+                  <td>Electric</td>
+                  <td>13g</td>
+                  <td>
+                    Indirect emissions due to sources of electricity production.
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="box">
+              <i class="fa-solid fa-train-subway"></i>
+              <h4>Train</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Norway average</td>
+                  <td>10g</td>
+                  <td>
+                    Indirect emissions due to sources of electricity production.
+                  </td>
+                </tr>
+                <tr>
+                  <td>EU average</td>
+                  <td>33g</td>
+                  <td>Direct emissions from fuel in combustion engines</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <h3>Other methods of transportation</h3>
+        <div class="container">
+          <div class="transport" style="display: block"></div>
+          <div class="transport">
+            <div class="box">
+              <i class="fa-solid fa-ferry"></i>
+              <h4>Ferry</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Ferry</td>
+                  <td>377g</td>
+                  <td>
+                    Burning diesel in combustion engines, but also releases
+                    potent greenhouse particles
+                  </td>
+                </tr>
+              </table>
+            </div>
+            <div class="box">
+              <i class="fa-solid fa-plane-departure"></i>
+              <h4>Plane</h4>
+              <table class="transport-table">
+                <tr>
+                  <th>Type</th>
+                  <th>CO2 Emission</th>
+                  <th>Short description</th>
+                </tr>
+                <tr>
+                  <td>Short-haul</td>
+                  <td>147g</td>
+                  <td>Direct emissions from combustion of jetfuel.</td>
+                </tr>
+                <tr>
+                  <td>Long-haul</td>
+                  <td>246g</td>
+                  <td>
+                    Direct emissions from combustion of jetfuel. Less
+                    energy-efficient due to frequent landing and take-off.
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+      </section>
     </div>
-    {% endblock %} 
-    
-</body>
+    {% endblock %}
+  </body>
 </html>
