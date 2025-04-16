@@ -14,7 +14,6 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 /* NAVIGATION BAR */
@@ -414,6 +413,8 @@ body {
 
 /* FORMULA BLOCK */
 .formula {
+    max-width: auto; 
+    overflow-x: auto;
     display: block;
     justify-content: center;
     width: 90%;
@@ -432,6 +433,8 @@ body {
     line-height: 1.6;
     color: beige;
 }
+
+
 
 /* REGISTER BLOCK */
 .register {
@@ -734,6 +737,7 @@ body {
 .transport {
   display: flex;
   align-items: start;
+  overflow-x: auto;
 }
 
 .transport .box {
@@ -750,7 +754,6 @@ body {
 .transport-table {
   border-collapse: collapse;
   background-color: #49736f;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .transport-table th,
@@ -843,47 +846,51 @@ body {
     border-color: #bd2130 !important;
 }
 
-        /* Table styling */
-        .table th, .table td {
-          padding: 0.75rem;
-          vertical-align: middle;
-      }
+/* Table styling */
+.table th, .table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
 
-      /* Chart containers styling */
-      .two_emissions_graphs {
-          margin-top: 30px;
-          margin-bottom: 30px;
-          display: flex;
-      }
+/* Chart containers styling */
+.two_emissions_graphs {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+}
 
-      .two_emissions_graphs .container {
-          display: flex;
-          justify-content: space-between;
-          gap: 30px;
-          width: 100%;
-      }
+.two_emissions_graphs .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    width: 100%;
+}
 
-      .two_emissions_graphs .container .box {
-          flex: 1;
-          background: #BFCCB7;
-          border-radius: 10px;
-          padding: 40px;
-          min-height: 350px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      }
+.two_emissions_graphs .container .box {
+    flex: 1;
+    background: #BFCCB7;
+    border-radius: 10px;
+    padding: 40px;
+    min-height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.table_main {
+  overflow-x: auto;
+}
 
 
-      /* Mobile responsiveness */
-      @media (max-width: 768px) {
-          .two_emissions_graphs .container {
-              flex-direction: column;
-          }
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .two_emissions_graphs .container {
+        flex-direction: column;
+    }
 
-          .two_emissions_graphs .container .box {
-              margin: 10px 0;
-              min-height: 350px;
-          }
-      }
+    .two_emissions_graphs .container .box {
+        margin: 10px 0;
+        min-height: 350px;
+    }
+}
 
 
   
