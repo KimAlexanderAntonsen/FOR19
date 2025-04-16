@@ -16,3 +16,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  function openModal() {
+    const modal = document.getElementById("pdfModal");
+    modal.classList.add("show");
+  }
+  
+  function closeModal() {
+    const modal = document.getElementById("pdfModal");
+    modal.classList.remove("show");
+  }
+  
+  window.onclick = function (event) {
+    const modal = document.getElementById("pdfModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  };
+  
+  
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
+      closeModal();
+    }
+  });
+  

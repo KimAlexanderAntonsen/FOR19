@@ -27,7 +27,19 @@
             a clear understanding of your environmental impact.
           </p>
           <div class="button-group">
-            <a href="#" class="btn btn-primary">Paper</a>
+            <a href="#" class="btn btn-primary" onclick="openModal()">Paper</a>
+            <div id="pdfModal" class="modal">
+              <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <iframe 
+                src="{{ url_for('static', filename='paper.pdf') }}#toolbar=0&navpanes=0&scrollbar=0" 
+                width="100%" 
+                height="100%" 
+                frameborder="0">
+              </iframe>
+              </div>
+            </div>
+            
             <a
               href="{{ url_for('carbon_app.carbon_app_home') }}"
               class="btn btn-primary"
@@ -276,18 +288,19 @@
                   <th>Short description</th>
                 </tr>
                 <tr>
-                  <td>Short-haul</td>
+                  <td>Long-haul</td>
                   <td>147g</td>
+                  <td>
+                    Direct emissions from combustion of jetfuel.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Short-haul</td>
+                  <td>246g</td>
                   <td>Direct emissions from combustion of jetfuel. Less
                     energy-efficient due to frequent landing and take-off.</td>
                 </tr>
-                <tr>
-                  <td>Long-haul</td>
-                  <td>246g</td>
-                  <td>
-                    Direct emissions from combustion of jetfuel. Substantially more time in the air creates a larger footprint.
-                  </td>
-                </tr>
+
               </table>
             </div>
           </div>
