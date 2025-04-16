@@ -19,12 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function openModal() {
     const modal = document.getElementById("pdfModal");
     modal.classList.add("show");
+    document.body.classList.add("modal-open");
   }
   
   function closeModal() {
     const modal = document.getElementById("pdfModal");
     modal.classList.remove("show");
+    document.body.classList.remove("modal-open");
   }
+  
   
   window.onclick = function (event) {
     const modal = document.getElementById("pdfModal");
