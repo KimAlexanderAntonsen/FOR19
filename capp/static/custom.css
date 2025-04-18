@@ -214,7 +214,6 @@ body {
 
 .modal-scroll-wrapper {
   flex: 1;
-  overflow-y: auto;
   -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
   height: 100%;
 }
