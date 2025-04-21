@@ -9,8 +9,8 @@ import json
 carbon_app = Blueprint("carbon_app", __name__)
 
 efco2={
-    'Walk': {'Human powered': 0.0},
-    'Bicycle': {'Human powered': 0.0},
+    'Walk': {'No Fossil Fuel': 0.0},
+    'Bicycle': {'No Fossil Fuel': 0.0},
     'Car': {
         'Petrol': 0.160,
         'Diesel': 0.170,
