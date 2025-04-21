@@ -1,4 +1,10 @@
 /* GLOBAL RESET */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 body {
   margin: 0;
   padding: 0;
@@ -486,7 +492,7 @@ body.modal-open {
     border-radius: 10px;
     background-color: #bfccb7;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 1.5rem;
+    margin: 0.5rem;
 }
 
 .summary h1 {
@@ -506,19 +512,15 @@ body.modal-open {
 
 /* FORMULA BLOCK */
 .formula {
-    max-width: auto; 
-    overflow-x: auto;
-    display: block;
-    justify-content: center;
-    width: 90%;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background-color: white;
-    margin: 1.5rem;
-    background: #49736f;
-    color: beige
+  background: #49736f;
+  color: beige;
+  border-radius: 10px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  width: 85%;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .formula p {
@@ -820,7 +822,7 @@ body.modal-open {
   padding: 1.5rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 1.5rem;
+  margin: 0.5rem;
 }
 .transport-section h3 {
   color: #333333;
@@ -829,31 +831,54 @@ body.modal-open {
 
 .transport {
   display: flex;
-  align-items: start;
-  overflow-x: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  overflow-x: hidden; 
+  box-sizing: border-box;
 }
 
+
 .transport .box {
-  flex: 1;
+  flex: 1 1 300px; 
   background: #49736f;
   color: beige;
   border-radius: 10px;
-  margin: 20px 10px;
+  margin: 0.5rem;
   padding: 15px 20px;
   text-align: center;
   align-items: center;
   justify-content: center;
+
 }
+
 .transport-table {
+  border-collapse: collapse;
+  background-color: #49736f;
+  width: 100%; /* Make table fit its container */
+  table-layout: fixed; /* Force columns to share space evenly */
   border-collapse: collapse;
   background-color: #49736f;
 }
 
-.transport-table th,
-.transport-table td {
+.transport-table td,
+.transport-table th {
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: normal; /* ✅ prevents breaking inside words */
   padding: 1rem;
   text-align: left;
 }
+
+@media (max-width: 768px) {
+  .transport-table td,
+  .transport-table th {
+    padding: 0.2rem;
+  }
+}
+
+
 
 .transport-table tbody tr:nth-child(even) {
   background-color: #99a392;
