@@ -355,7 +355,7 @@ body.modal-open {
   text-align: center;
   padding: 1.5rem;
   border-radius: 10px;
-  background-color: #edebe9; /* Updated to match the provided color scheme */
+  background-color: #edebe9; 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -420,13 +420,13 @@ body.modal-open {
 
 /* FOOTER */
 .footer {
-    background-color: #2c4a33; /* Updated to match the provided color scheme */
+    background-color: #2c4a33; 
     color: #f0f0f0;
     padding: 2rem 0;
     font-size: 0.95rem;
     box-sizing: border-box;
     width: 100%;
-    overflow-x: hidden; /* prevent scrollbar glitches */
+    overflow-x: hidden; 
     margin-top: auto;
 }
 
@@ -544,7 +544,7 @@ body.modal-open {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 500px; /* Increased from previous value */
+  max-width: 500px; 
   margin: 2rem auto;
 }
 
@@ -556,9 +556,9 @@ body.modal-open {
 
 .signup-text {
   text-align: center;
-  margin: 0.5rem 0; /* Reduced from 1.5rem */
+  margin: 0.5rem 0; 
   color: #333333;
-  padding-top: 1rem; /* Added padding top */
+  padding-top: 1rem; 
 }
 
 .signup-text a {
@@ -577,11 +577,11 @@ body.modal-open {
 }
 
 .form-group {
-  margin-bottom: 1rem; /* Reduced from 1.5rem */
+  margin-bottom: 1rem; 
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Change from center to flex-start */
-  width: 300px; /* Match input field width */
+  align-items: flex-start; 
+  width: 300px; 
   margin-left: auto;
   margin-right: auto;
 }
@@ -591,11 +591,11 @@ body.modal-open {
   display: block;
   margin-bottom: 0.5rem;
   align-self: flex-start;
-  margin-left: 0; /* Remove the calculated margin */
+  margin-left: 0; 
 }
 
 .form-control {
-  width: 100%; /* Change to 100% to match form-group width */
+  width: 100%; 
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -623,13 +623,13 @@ body.modal-open {
 /* Style for register button to match login button */
 .register .btn,
 .register .cta-button {
-  width: auto; /* Changed from fixed width */
-  min-width: 100px; /* Added minimum width */
-  padding: 0.5rem 1rem; /* Match login button padding */
-  margin: 1.5rem 0.5rem; /* Increased from 1rem */
+  width: auto; 
+  min-width: 100px; 
+  padding: 0.5rem 1rem; 
+  margin: 1.5rem 0.5rem; 
   font-size: 1rem;
   text-align: center;
-  display: inline-block; /* Changed from block */
+  display: inline-block; 
 }
 
 .register-link {
@@ -656,7 +656,7 @@ body.modal-open {
 
 .register .btn-primary {
   width: 200px;
-  margin: 0.5rem auto; /* Reduced from 1.5rem */
+  margin: 0.5rem auto; 
   display: block;
 }
 
@@ -873,7 +873,7 @@ body.modal-open {
 .transport-table th {
   white-space: normal;
   overflow-wrap: break-word;
-  word-break: normal; /* ✅ prevents breaking inside words */
+  word-break: normal; 
   padding: 1rem;
   text-align: left;
 }
@@ -899,8 +899,8 @@ body.modal-open {
 
 /* TRANSPORT BOX */
 .transport-box {
-    flex: 0 0 165px;  /* Slightly reduced from 175px */
-    height: 165px;  /* Slightly reduced from 175px */
+    flex: 0 0 165px;  
+    height: 165px;  
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -911,7 +911,7 @@ body.modal-open {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     transition: transform 0.2s ease;
-    gap: 15px; /* Space between icon and label */
+    gap: 15px;
 }
 
 .transport-box:hover {
@@ -921,15 +921,15 @@ body.modal-open {
 .transport-label {
     color: #333333;
     font-weight: 700;
-    font-size: 1.4rem; /* Increased from 1.2rem */
+    font-size: 1.4rem; 
     margin: 0;
-    order: 2; /* Places text after icon */
+    order: 2; 
 }
 
 .transport-box i {
     font-size: 4rem;
     color: #317734;
-    order: 1; /* Places icon */
+    order: 1; 
 }
 
 .transport-grid {
@@ -939,9 +939,9 @@ body.modal-open {
 
 .transport-row {
     display: flex;
-    justify-content: center;  /* Changed from space-between */
-    gap: 20px;  /* Increased from 12px */
-    margin-bottom: 20px;  /* Increased from 12px */
+    justify-content: center;  
+    gap: 20px;  
+    margin-bottom: 20px;  
 }
 
 @media (max-width: 768px) {
@@ -1046,7 +1046,7 @@ body.modal-open {
   .two_emissions_graphs canvas {
     max-width: 100%;
     width: 100% !important;
-    height: 100% !important; /* ✅ Fill the box height */
+    height: 100% !important; 
   }
 }
 
